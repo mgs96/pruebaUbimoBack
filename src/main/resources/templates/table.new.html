@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form action="/tables" method="post" th:object="${table}">
+      
+      <input th:field="*{identifier}">
+      <p th:each="range,rowStat : ${table.ranges}">
+	    <input th:field="*{ranges[__${rowStat.index}__].lower}" >
+	    <input th:field="*{ranges[__${rowStat.index}__].upper}" >
+	    <input th:field="*{ranges[__${rowStat.index}__].name}" >
+      </p>
+      <br />
+      <input type="submit">
+      
+      <br />
+    </form>
+</body>
+</html>
