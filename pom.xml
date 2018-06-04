@@ -6,7 +6,7 @@
 	<groupId>com.ubimo</groupId>
 	<artifactId>prueba-ubimo</artifactId>
 	<version>1.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>prueba-ubimo</name>
 	<description>Prueba Ubimo</description>
